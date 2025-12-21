@@ -8,23 +8,21 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "FORKED Notes",
     pageTitleSuffix: "",
     enableSPA: true,
-    enablePopovers: true,
-    analytics: {
-      provider: "plausible",
-    },
+    enablePopovers: false,
+    analytics: null,
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "frkd.dev",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
+        header: "Albert Sans",
+        body: "Source Serif 4",
         code: "IBM Plex Mono",
       },
       colors: {
