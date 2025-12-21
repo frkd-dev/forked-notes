@@ -18,11 +18,13 @@ Here are step-by-step instructions how to do that. Use on your own risk.
 csrutil disable
 ```
 This disables [System integrity protection](https://developer.apple.com/documentation/security/disabling_and_enabling_system_integrity_protection) as we need to modify/patch system files.
+
 4. Reboot your Mac.
 5. If you have macOS 10.15 (Catalina) and above, open Terminal and run:
 ```sh
 sudo mount -uw /
 ```
+
 6. Get Intel graphics platform ID:
 ```sh
 ioreg -l | grep ig-platform-id
@@ -35,7 +37,8 @@ Remember your ID.
 ```sh
 kextstat | grep Framebuffer
 ```
-the output will be like `com.apple.driver.AppleIntelFramebufferAzul`
+the output will be like `com.apple.driver.AppleIntelFramebufferAzul`.
+
 8. Open respective framebuffer kext file in hex editor: `/System/Library/Extensions/AppleIntelFramebufferAzul.kext/Contents/MacOS/AppleIntelFramebufferAzul`
 9. Find your Intel ID from step 6 (mine was 0700260d) and you'll see something like:
 
@@ -49,4 +52,5 @@ the output will be like `com.apple.driver.AppleIntelFramebufferAzul`
 ```sh
 sudo kextcache -i /sudo reboot
 ```
+
 Done. You have 4GB of video RAM.
