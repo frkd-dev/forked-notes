@@ -1,10 +1,11 @@
 ---
 share: true
 date: 2025-11-10
-tags:
+tag:
   - macos
   - shortcuts
   - shell
+title: "Operation Not Permitted: Spotlight, Apple Shortcuts, and Shell Script."
 ---
 Recently, I installed a new macOS 26 Tahoe and decided to try how can I now run my shortcuts right from the Spotlight. I created a simple shortcut that gets a file from Spotlight and runs a shell command `cat "$1"` to view the content of the currently selected file in Finder from my user's home directory.
 
